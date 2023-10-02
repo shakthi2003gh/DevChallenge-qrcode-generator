@@ -1,0 +1,41 @@
+.container {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: "";
+    width: 19rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: $clr-primary;
+    transform: translate(-50%, -50%);
+    opacity: 0.2;
+    z-index: -1;
+
+    @media (min-width: 50rem) {
+      width: 25rem;
+    }
+  }
+}
+
+canvas {
+  width: 150px !important;
+  height: 150px !important;
+  border-radius: 2rem;
+  background: white;
+
+  @media (min-width: 50rem) {
+    width: 200px !important;
+    height: 200px !important;
+  }
+}
+
+button {
+  font-size: inherit;
+
+  @media (min-width: 50rem) {
+    font-size: 2rem;
+  }
+}
