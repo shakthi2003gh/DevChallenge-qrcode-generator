@@ -1,4 +1,5 @@
 @import "utilities";
+@import "components";
 @import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
 
 *,
@@ -10,16 +11,29 @@
 html {
   font-size: 62.5%;
   min-width: 375px;
+  user-select: none;
 }
 
 body {
   display: grid;
   place-content: center;
   place-items: center;
+  gap: 3rem;
   font-size: 16px;
   height: 100vh;
   padding: 0;
   margin: 0;
   color: $clr-text;
   background-color: $clr-bg;
+  background-repeat: no-repeat;
+  background-position: calc(50% + 25vw) calc(50% + 5vh);
+  background-size: clamp(350px, 50vw, 600px);
+
+  @media (min-width: 50rem) {
+    gap: 6rem;
+
+    .logo {
+      width: 20rem;
+    }
+  }
 }

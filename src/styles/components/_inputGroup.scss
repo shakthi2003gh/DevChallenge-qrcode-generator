@@ -1,0 +1,40 @@
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.4rem;
+  width: clamp(29.5rem, 50vw, 4rem);
+  padding: 0.4rem;
+  border: 0.2rem solid $clr-primary;
+  border-radius: 1rem;
+  background-color: $clr-secondary;
+
+  input {
+    font-size: inherit;
+    font-weight: 500;
+    width: 80%;
+    padding-left: 1rem;
+    border: none;
+    color: $clr-text;
+    background-color: transparent;
+    outline: none;
+
+    &::placeholder {
+      color: $clr-placeholder;
+    }
+  }
+
+  button {
+    font-size: inherit;
+    width: 35%;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  @media (min-width: 50rem) {
+    font-size: 2rem;
+    width: 45rem;
+  }
+}
