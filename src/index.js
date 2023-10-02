@@ -1,3 +1,12 @@
+import LandingSection from "./layouts/landingSection";
+import BG from "./assets/bg-illustration.svg";
 import "./styles/index.scss";
 
-document.querySelector("body").innerText = "hello";
+export function navigateToLanding() {
+  document.body.innerHTML = "";
+  document.body.append(...LandingSection);
+}
+
+document.body.style.backgroundImage = `url('${BG}')`;
+
+navigateToLanding();
